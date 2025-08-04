@@ -1,0 +1,314 @@
+.login-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5vw 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 5% 6%;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: min(90vw, 400px);
+  text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, #57caff, #ff712f);
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+.login-title {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.spinner {
+  border: 0.3rem solid #e5e7eb;
+  border-top: 0.3rem solid #3b82f6;
+  border-radius: 50%;
+  width: clamp(1.8rem, 5vw, 2rem);
+  height: clamp(1.8rem, 5vw, 2rem);
+  animation: spin 1s linear infinite;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  justify-content: center; 
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.form-label {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input {
+  padding: clamp(0.8rem, 2.5vw, 1rem) clamp(2rem, 5vw, 2.5rem) clamp(0.8rem, 2.5vw, 1rem) clamp(0.8rem, 2.5vw, 1rem);
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0.5rem rgba(59, 130, 246, 0.3);
+}
+
+.input-error {
+  border-color: #dc2626;
+}
+
+.input-icon {
+  position: absolute;
+  right: clamp(0.6rem, 2vw, 0.8rem);
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.password-toggle {
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: #3b82f6;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  margin-top: 0.3rem;
+}
+
+.animate-error {
+  animation: shake 0.3s ease-in-out;
+}
+
+.submit-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: clamp(0.8rem, 2.5vw, 1rem);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: bold;
+  max-width: 40%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.submit-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.social-login {
+  margin: clamp(1rem, 3vw, 1.5rem) 0;
+}
+
+.social-login-text {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  color: #4b5563;
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
+}
+
+.social-buttons {
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  gap: clamp(0.8rem, 2.5vw, 1rem);
+}
+.submit-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: clamp(0.8rem, 2.5vw, 1rem);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: fit-content; 
+  margin: 0 auto; 
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.google-button {
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.facebook-button {
+  background-color: #ffffff;
+  
+  border-radius: 100px;
+}
+
+.social-icon {
+  width: clamp(1.5rem, 4vw, 1.5rem);
+  height: clamp(1.2rem, 4vw, 1.5rem);
+}
+
+.signup-link {
+  margin-top: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  color: #4b5563;
+}
+
+.link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 4vw 3vw;
+  }
+
+  .login-card {
+    padding: 4% 5%;
+    max-width: 95vw;
+  }
+
+  .login-title {
+    font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+  }
+
+  .form-input {
+    padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.8rem, 4.5vw, 2rem) clamp(0.6rem, 2vw, 0.8rem) clamp(0.6rem, 2vw, 0.8rem);
+  }
+
+  .submit-button {
+    padding: clamp(0.6rem, 2vw, 0.8rem);
+  }
+
+  .social-button {
+    width: clamp(2rem, 7vw, 2.5rem);
+    height: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .social-icon {
+    width: clamp(1rem, 3.5vw, 1.2rem);
+    height: clamp(1rem, 3.5vw, 1.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 3vw 2vw;
+  }
+
+  .login-card {
+    padding: 5% 4%;
+    max-width: 98vw;
+  }
+
+  .login-title {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+  }
+
+  .form-label {
+    font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+  }
+
+  .form-input {
+    font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+    padding: clamp(0.5rem, 1.8vw, 0.7rem) clamp(1.5rem, 4vw, 1.8rem) clamp(0.5rem, 1.8vw, 0.7rem) clamp(0.5rem, 1.8vw, 0.7rem);
+  }
+
+  .input-icon {
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+  }
+
+  .error-text {
+    font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+  }
+
+  .submit-button {
+    font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+    padding: clamp(0.5rem, 1.8vw, 0.7rem);
+  }
+
+  .social-login-text {
+    font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+  }
+
+  .social-button {
+    width: clamp(1.8rem, 6vw, 2rem);
+    height: clamp(1.8rem, 6vw, 2rem);
+  }
+
+  .social-icon {
+    width: clamp(0.9rem, 3vw, 1rem);
+    height: clamp(0.9rem, 3vw, 1rem);
+  }
+
+  .signup-link {
+    font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+  }
+}

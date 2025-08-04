@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": "Ayush Negi",
+      "referralCode": "ayu2025",
+      "donations": 500
+    },
+    {
+      "name": "Negi",
+      "referralCode": "neg2025",
+      "donations": 400
+    }
+  ],
+  "leaderboard": [
+    { "name": "Ayush Negi", "donations": 500, "rank": 1 },
+    { "name": "Negi", "donations": 400, "rank": 2 }
+  ]
+}

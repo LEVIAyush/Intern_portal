@@ -1,0 +1,38 @@
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f3f4f6;
+  border-radius: 5px;
+}
+
+.task-item.completed {
+  background: #d1fae5;
+  text-decoration: line-through;
+}
+
+.task-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task-item span {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-item {
+    padding: 8px;
+  }
+
+  .task-item span {
+    font-size: 0.9rem;
+  }
+}

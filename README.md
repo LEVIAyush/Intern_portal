@@ -242,4 +242,4 @@ intern-portal/
 - Enhance the signup page with animations and social login buttons.
 - Add user profile editing on the dashboard.
 - Implement real-time leaderboard updates using WebSockets.
-- Fix remaining npm vulnerabilities with dependency upgrades.
+- Fix remaining npm vulnerabilities with dependency upgrades."# Intern_portal" 
